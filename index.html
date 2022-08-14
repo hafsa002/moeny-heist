@@ -13,7 +13,7 @@
         <h1 class = "text-center mb-3"> Welcome to Our Bank</h1>
         <div class ="submit-area">
 
-            <form>
+          
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" placeholder = "Enter your email" aria-describedby="emailHelp">
@@ -23,8 +23,8 @@
                   <label for="exampleInputPassword1" class="form-label">Password</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder = "Enter your password">
                 </div>
-                <button type="submit"  id = "loginId" class="btn btn-primary fs-5">Login</button>
-              </form>
+                <button class="btn btn-primary fs-5"  id = "loginId">Login</button>
+              
 
         </div>
 
@@ -42,7 +42,7 @@
         <div class="col-md-4">
             <div class="withdraw">
                 <h5>Withdraw</h5>
-                <h2>$ 00</h2>
+                <h2>$ <span id = "currentWithdraw">00</span></h2>
             </div>
         </div>
         <div class="col-md-4">
@@ -75,13 +75,11 @@
     </div>
 
     <script>
-        const loginbtn = document.getElementById("loginId");
-        loginbtn.addEventListener('mouseover', function(){
+        const loginBtn = document.getElementById("loginId");
+        loginBtn.addEventListener("click", function(){
  
-            const longinArea = document.getElementById("login-area");
-            longinArea.style.display = "none";
-            const transArea = document.getElementById("transaction-area");
-            transArea.style.display = "block";
+           document.getElementById("login-area").style.display = "none"
+            document.getElementById("transaction-area").style.display = "block";
 
         })
 
@@ -121,7 +119,11 @@
 
          const withdrawBtn = document.getElementById("addWithdraw");
          withdrawBtn.addEventListener("click", function(){
-            const withdrawNumber = getInputNumber("withdrawNumber");
+            const withdrawNumber = getInputNumber("withdrawAmount");
+
+            updateSpanText("currentWithdraw", withdrawNumber);
+            updateSpanText("currentBalance", -1*withdrawNumber);
+            document.getElementById("withdrawAmount").value = '';
            
 
          })
