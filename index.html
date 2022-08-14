@@ -5,8 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Heist Banking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id ="login-area">
+        <h1 class = "text-center mb-3"> Welcome to Our Bank</h1>
+        <div class ="submit-area">
+
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder = "Enter your email" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder = "Enter your password">
+                </div>
+                <button type="submit"  id = "loginId" class="btn btn-primary fs-5">Login</button>
+              </form>
+
+        </div>
+
+    </div>
+    <div id = "transaction-area"> 
+       <div class="row">
+        <div class="col-md-4">
+            <div class="deposite">
+                <h5>Deposite</h5>
+                <h2>$ 00</h2>
+            </div>
+          
+        </div>
+        <div class="col-md-4">
+            <div class="withdraw">
+                <h5>Withdraw</h5>
+                <h2>$ 00</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="balance">
+                <h5>Balance</h5>
+            <h2>$ 1240</h2>
+            </div>
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-md-6">
+            <div class ="submit-area">
+                <h4>Deposite</h4>
+            <input id = "depositeAmount" type="text" placeholder="$ enter deposite amount">
+            <br>
+            <button class="btn btn-success" id = "addDeposite">Diposite</button></div>
+            </div>
+       
+            <div class="col-md-6">
+                <div class ="submit-area">
+                <h4>Withdraw</h4>
+                <input id = "withdrawAmount" type="text" placeholder="$ enter withdraw amount">
+                <br>
+                <button class="btn btn-success" id = "addWithdraw">Withdraw</button></div>
+           </div>
+        </div>
+        
+
+    </div>
+
+    <script>
+        const loginbtn = document.getElementById("loginId");
+        loginbtn.addEventListener('mouseover', function(){
+ 
+            const longinArea = document.getElementById("login-area");
+            longinArea.style.display = "none";
+            const transArea = document.getElementById("transaction-area");
+            transArea.style.display = "block";
+
+        })
+
+
+    //deposite button event handler
+     const depositeBtn = document.getElementById("addDeposite");
+        depositeBtn.addEventListener("click", function(){
+        const depositeAmount = document.getElementById("depositeAmount");
+        const depositeNumber = parseFloat(depositeAmount);
+        
+
+         })
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

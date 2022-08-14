@@ -1,0 +1,62 @@
+body{
+    padding: 100px;
+}
+
+
+.submit-area{
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+#transaction-area{
+    display: none;
+    justify-content: ;
+}
+
+.deposite{
+    background-color: purple;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.withdraw{
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+ 
+
+}
+
+.balance{
+    background-color: green;
+    color: white;
+    padding:10px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.col-md-6{
+    margin:150px 0;
+    text-align: center;
+    padding: 0 50px;
+    
+   
+}
+
+.btn-success{
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-success:{
+    background-color: white;
+
+}
