@@ -21,6 +21,7 @@ body{
     color: white;
     border-radius: 20px;
     text-align: center;
+    margin: 10px;
     
 }
 .withdraw{
@@ -29,6 +30,7 @@ body{
     padding: 10px;
     border-radius: 20px;
     text-align: center;
+    margin: 10px;
  
 
 }
@@ -39,11 +41,14 @@ body{
     padding:10px;
     border-radius: 20px;
     text-align: center;
+    margin: 10px;
+    
+
 
 }
 
 .col-md-6{
-    margin:150px 0;
+    margin:50px 0;
     text-align: center;
     padding: 0 50px;
     
